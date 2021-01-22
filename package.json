@@ -4,7 +4,9 @@
   "description": "The goal of this project is to implement a Checkers AI with the minimax algorithm and alpha-beta pruning.",
   "main": "index.ts",
   "scripts": {
-    "build": "yarn tsc"
+    "build": "tsc --build",
+    "serve": "ts-node ./src",
+    "start": "node ./dist"
   },
   "keywords": [],
   "author": "",
