@@ -23,5 +23,8 @@
     "camelcase": "error",
     "comma-dangle": ["error", "never"],
     "quotes": ["error", "double"]
-  }
+  },
+  "ignorePatterns": [
+    "webpack.config.js"
+  ]
 }
