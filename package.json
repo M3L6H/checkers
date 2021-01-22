@@ -1,0 +1,15 @@
+{
+  "name": "checkers",
+  "version": "1.0.0",
+  "description": "The goal of this project is to implement a Checkers AI with the minimax algorithm and alpha-beta pruning.",
+  "main": "index.ts",
+  "scripts": {
+    "build": "yarn tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
