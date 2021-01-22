@@ -1,5 +1,7 @@
+import * as _ from "lodash";
+
 const el = document.createElement("div");
 
-el.innerHTML = "Hello Live Reload";
+el.innerHTML = _.join(["Hello", "lodash"], " ");
 
 document.body.appendChild(el);
