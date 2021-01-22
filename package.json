@@ -2,7 +2,7 @@
   "name": "checkers",
   "version": "1.0.0",
   "description": "The goal of this project is to implement a Checkers AI with the minimax algorithm and alpha-beta pruning.",
-  "main": "index.ts",
+  "private": true,
   "scripts": {
     "build": "tsc --build",
     "lint": "tsc --noEmit && eslint '**/*.ts'",
