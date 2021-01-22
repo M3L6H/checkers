@@ -15,7 +15,7 @@
     "no-alert": "error",
     "class-methods-use-this": "error",
     "consistent-return": "error",
-    "curly": ["error", "mutli-or-nest", "consistent"],
+    "curly": ["error", "multi-or-nest", "consistent"],
     "eqeqeq": "error",
     "no-fallthrough": "off",
     "require-await": "error",
