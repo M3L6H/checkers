@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "semi": "error",
+    "no-console": "error",
+    "no-alert": "error",
+    "class-methods-use-this": "error",
+    "consistent-return": "error",
+    "curly": ["error", "mutli-or-nest", "consistent"],
+    "eqeqeq": "error",
+    "no-fallthrough": "off",
+    "require-await": "error",
+    "block-spacing": "error",
+    "camelcase": "error",
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "double"]
+  }
+}
