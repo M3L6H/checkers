@@ -4,10 +4,13 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
-  devtool: "inline-source-map",
   mode: process.env.NODE_ENV || "development",
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist"
+  },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
       title: "Checkers"
     })
