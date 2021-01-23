@@ -33,6 +33,7 @@
     "eslint": "^7.18.0",
     "html-webpack-plugin": "^4.5.1",
     "jsdoc": "^3.6.6",
+    "jsdoc-mermaid": "^1.0.0",
     "jsdom": "^16.4.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
