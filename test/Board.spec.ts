@@ -18,7 +18,7 @@ describe("Board", () => {
       }
     });
 
-    it("should throw an error if given invald coordinates", () => {
+    it("should throw an error if given invalid coordinates", () => {
       expect(() => board.pieceAt(-1, 0)).to.throw(RangeError);
       expect(() => board.pieceAt(0, -1)).to.throw(RangeError);
       expect(() => board.pieceAt(Board.SIZE, 0)).to.throw(RangeError);
