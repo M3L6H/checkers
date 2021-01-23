@@ -21,7 +21,7 @@ describe("NullPiece", () => {
     });
   });
 
-  describe("promote", () => {
+  describe("#promote", () => {
     it("should not do anything", () => {
       expect(piece.isKing).to.be.false;
       piece.promote();
