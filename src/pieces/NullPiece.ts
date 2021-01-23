@@ -11,4 +11,8 @@ export default class NullPiece implements Piece {
   isEmpty() {
     return true;
   }
+
+  isKing() {
+    return false;
+  }
 }
