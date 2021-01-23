@@ -22,7 +22,8 @@
     "block-spacing": "error",
     "camelcase": "error",
     "comma-dangle": ["error", "never"],
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "space-before-function-paren": ["error", "never"]
   },
   "ignorePatterns": [
     "webpack.config.js"
