@@ -9,13 +9,12 @@ class Board {
   constructor() {
     this._board = Array.from({ length: Board.SIZE }, (_e, i) =>
       Array.from({ length: Board.SIZE }, (_f, j) => {
-        if (_.inRange(i, 3, Board.SIZE - 3) || i % 2 !== j % 2) {
+        if (_.inRange(i, 3, Board.SIZE - 3) || i % 2 !== j % 2) 
           return new NullPiece();
-        } else if (i < 3) {
+        else if (i < 3)
           return new BlackPiece();
-        } else {
+        else
           return new RedPiece();
-        }
       }));
   }
 
