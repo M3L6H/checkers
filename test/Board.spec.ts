@@ -2,6 +2,7 @@ import { Board } from "../src";
 import { Color } from "../src/pieces";
 import { expect } from "chai";
 import { JSDOM } from "jsdom";
+import _ from "lodash";
 import "mocha";
 
 const loopThroughBoardAnd = (cb: (i: number, j: number) => unknown) => {
@@ -26,7 +27,7 @@ describe("Board", () => {
 
   describe("#pieceAt", () => {
     it("should return the piece at the given position", () => {
-      for (let i = 4; i <= 5; ++i) {
+      for (let i = 4; i <= Board.SIZE - 3; ++i) {
         for (let j = 0; j < 8; ++j)
           expect(board.pieceAt(i, j).color).to.equal(Color.Null);
       }
@@ -51,6 +52,17 @@ describe("Board", () => {
       loopThroughBoardAnd((i, j) => {
         const tile = rootEle.children[i].children[j];
         expect(tile.classList.contains("tile")).to.be.true;
+      });
+    });
+
+    it("should have empty tiles in the middle rows and white tiles", () => {
+      board.render(rootEle);
+
+      loopThroughBoardAnd((i, j) => {
+        if (_.inRange(i, 4, Board.SIZE - 2) || i % 2 === j % 2) {
+          const tile = rootEle.children[i].children[j];
+          expect(tile.classList.contains("empty")).to.be.true;
+        }
       });
     });
 
