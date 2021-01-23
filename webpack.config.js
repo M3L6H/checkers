@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: "Checkers"
+      template: path.resolve(__dirname, "assets/index.html")
     })
   ],
   module: {
