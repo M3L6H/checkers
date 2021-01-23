@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6,
+div, section, span, main, body,
+form, input, button, textarea,
+img, p, a, blockquote, pre,
+ol, ul, li, i {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+
+  color: inherit;
+
+  text-decoration: none;
+  font-size: inherit;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
