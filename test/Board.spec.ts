@@ -25,9 +25,23 @@ describe("Board", () => {
   
   beforeEach(() => board = new Board());
 
+  it("should initialize with red pieces on the dark squares in the first three rows", () => {
+    loopThroughBoardAnd((i, j) => {
+      if (i < 3 && i % 2 !== j % 2)
+        expect(board.pieceAt(i, j).color).to.equal(Color.Red);
+    });
+  });
+
+  it("should initialize with black pieces on the dark squares in the last three rows", () => {
+    loopThroughBoardAnd((i, j) => {
+      if (i >= Board.SIZE - 3 && i % 2 !== j % 2)
+        expect(board.pieceAt(i, j).color).to.equal(Color.Black);
+    });
+  });
+
   describe("#pieceAt", () => {
     it("should return the piece at the given position", () => {
-      for (let i = 4; i <= Board.SIZE - 3; ++i) {
+      for (let i = 3; i < Board.SIZE - 3; ++i) {
         for (let j = 0; j < 8; ++j)
           expect(board.pieceAt(i, j).color).to.equal(Color.Null);
       }
@@ -59,7 +73,9 @@ describe("Board", () => {
       board.render(rootEle);
 
       loopThroughBoardAnd((i, j) => {
-        if (_.inRange(i, 4, Board.SIZE - 2) || i % 2 === j % 2) {
+        i = Board.SIZE - i - 1;
+
+        if (_.inRange(i, 3, Board.SIZE - 3) || i % 2 !== j % 2) {
           const tile = rootEle.children[i].children[j];
           expect(tile.classList.contains("empty")).to.be.true;
         }
