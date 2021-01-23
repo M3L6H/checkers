@@ -1,7 +1,8 @@
-import _ from "lodash";
+import Board from "./Board";
 
-const el = document.createElement("div");
+import "../style/index.scss";
 
-el.innerHTML = _.join(["Hello", "lodash"], " ");
+const boardEle = document.querySelector("div#board") as HTMLDivElement;
+const board = new Board();
 
-document.body.appendChild(el);
+board.render(boardEle);
