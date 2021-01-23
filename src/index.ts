@@ -1,7 +1,1 @@
-import * as _ from "lodash";
-
-const el = document.createElement("div");
-
-el.innerHTML = _.join(["Hello", "lodash"], " ");
-
-document.body.appendChild(el);
+export { default as Board } from "./Board";
