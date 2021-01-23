@@ -37,20 +37,16 @@ class Board {
     const rowInc = flipped ? 1 : -1;
 
     while (_.inRange(row, 0, Board.SIZE)) {
-      const rowEle = Board.createRow(row);
-      
       let col = flipped ? Board.SIZE - 1 : 0;
       const colInc = flipped ? -1 : 1;
 
       while (_.inRange(col, 0, Board.SIZE)) {
         const tileEle = Board.createTile(row, col, this.isEmpty(row, col));
-        rowEle.appendChild(tileEle);
+        rootEle.appendChild(tileEle);
         
         col += colInc;
       }
 
-      rootEle.appendChild(rowEle);
-      
       row += rowInc;
     }
   }
@@ -63,21 +59,12 @@ class Board {
     return _.inRange(row, 0, Board.SIZE) && _.inRange(col, 0, Board.SIZE);
   }
 
-  private static createRow(row: number): HTMLDivElement {
-    const rowEle = document.createElement("div");
-
-    rowEle.classList.add("row");
-    rowEle.dataset.row = row.toString();
-
-    return rowEle;
-  }
-
   private static createTile(row: number, col: number, empty: boolean): HTMLDivElement {
     const tileEle = document.createElement("div");
 
     tileEle.classList.add("tile");
     if (empty) tileEle.classList.add("empty");
-    tileEle.classList.add((row % 2 === col % 2) ? "white" : "black");
+    tileEle.classList.add((row % 2 === col % 2) ? "red" : "black");
     
     tileEle.dataset.row = row.toString();
     tileEle.dataset.col = col.toString();

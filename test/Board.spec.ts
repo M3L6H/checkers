@@ -64,7 +64,7 @@ describe("Board", () => {
       board.render(rootEle);
 
       loopThroughBoardAnd((i, j) => {
-        const tile = rootEle.children[i].children[j];
+        const tile = rootEle.children[i * Board.SIZE + j];
         expect(tile.classList.contains("tile")).to.be.true;
       });
     });
@@ -76,7 +76,7 @@ describe("Board", () => {
         i = Board.SIZE - i - 1;
 
         if (_.inRange(i, 3, Board.SIZE - 3) || i % 2 !== j % 2) {
-          const tile = rootEle.children[i].children[j];
+          const tile = rootEle.children[i * Board.SIZE + j];
           expect(tile.classList.contains("empty")).to.be.true;
         }
       });
@@ -87,7 +87,7 @@ describe("Board", () => {
         board.render(rootEle, { flipped: true });
 
         loopThroughBoardAnd((i, j) => {
-          const tile = rootEle.children[i].children[j] as HTMLDivElement;
+          const tile = rootEle.children[i * Board.SIZE + j] as HTMLDivElement;
           expect(tile.dataset.row).to.equal(i.toString());
           expect(tile.dataset.col).to.equal((Board.SIZE - j - 1).toString());
         });
