@@ -1,15 +1,15 @@
-import Piece, { Color, WhitePiece } from "../../src/pieces";
+import Piece, { Color, RedPiece } from "../../src/pieces";
 import { expect } from "chai";
 import "mocha";
 
-describe("WhitePiece", () => {
+describe("RedPiece", () => {
   let piece: Piece;
 
-  beforeEach(() => piece = new WhitePiece());
+  beforeEach(() => piece = new RedPiece());
 
   describe("color", () => {
-    it("should be White", () =>
-      expect(piece.color).to.equal(Color.White)
+    it("should be Red", () =>
+      expect(piece.color).to.equal(Color.Red)
     );
   });
 

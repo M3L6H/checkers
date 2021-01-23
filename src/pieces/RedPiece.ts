@@ -1,13 +1,13 @@
 import Color from "./Color";
 import Piece from "./Piece";
 
-class WhitePiece implements Piece {
+class RedPiece implements Piece {
   readonly color: Color;
 
   private _isKing: boolean;
   
   constructor() {
-    this.color = Color.White;
+    this.color = Color.Red;
     this._isKing = false;
   }
 
@@ -20,4 +20,4 @@ class WhitePiece implements Piece {
   }
 }
 
-export default WhitePiece;
+export default RedPiece;

@@ -1,7 +1,7 @@
 enum Color {
   Null,
   Black,
-  White
+  Red
 }
 
 export default Color;
