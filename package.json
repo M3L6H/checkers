@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
+    "docs": "jsdoc -c jsdoc.json",
     "lint": "tsc --noEmit && eslint '**/*.ts'",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
