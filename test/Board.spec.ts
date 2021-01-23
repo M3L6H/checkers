@@ -6,9 +6,7 @@ import "mocha";
 describe("Board", () => {
   let board: Board;
 
-  beforeEach(() => {
-    board = new Board();
-  });
+  beforeEach(() => board = new Board());
   
   describe ("#pieceAt", () => {
     it("should return the piece at the given position", () => {

@@ -5,20 +5,18 @@ import "mocha";
 describe("NullPiece", () => {
   let piece: Piece;
   
-  beforeEach(() => {
-    piece = new NullPiece();
-  });
+  beforeEach(() => piece = new NullPiece());
 
   describe("color", () => {
-    it("should be Null", () => {
-      expect(piece.color).to.equal(Color.Null);
-    });
+    it("should be Null", () =>
+      expect(piece.color).to.equal(Color.Null)
+    );
   });
   
   describe("isKing", () => {
-    it("should return false", () => {
-      expect(piece.isKing).to.be.false;
-    });
+    it("should return false", () =>
+      expect(piece.isKing).to.be.false
+    );
   });
 
   describe("#promote", () => {
