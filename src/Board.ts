@@ -1,6 +1,6 @@
 import Piece from "./pieces";
 
-export default class Board {
+class Board {
   private board: Array<Array<Piece>>;
   
   constructor() {
@@ -9,3 +9,5 @@ export default class Board {
     ];
   }
 }
+
+export default Board;

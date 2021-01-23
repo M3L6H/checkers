@@ -1,18 +1,23 @@
 import Color from "./Color";
 import Piece from "./Piece";
 
-export default class NullPiece implements Piece {
+class NullPiece implements Piece {
   readonly color: Color;
+
+  private _isKing: boolean;
   
   constructor() {
     this.color = Color.Null;
+    this._isKing = false;
   }
 
-  isEmpty() {
-    return true;
+  get isKing(): boolean {
+    return this._isKing;
   }
 
-  isKing() {
-    return false;
+  promote(): void {
+    this._isKing = false;
   }
 }
+
+export default NullPiece;

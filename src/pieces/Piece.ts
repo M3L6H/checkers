@@ -1,7 +1,9 @@
 import Color from "./Color";
 
-export default interface Piece {
+interface Piece {
   readonly color: Color;
-  isEmpty(): boolean;
-  isKing(): boolean;
+  readonly isKing: boolean;
+  promote(): void;
 }
+
+export default Piece;
