@@ -1,5 +1,5 @@
 import _ from "lodash";
-import Piece, { Color, NullPiece } from "./pieces";
+import Piece, { BlackPiece, Color, NullPiece, RedPiece } from "./pieces";
 
 class Board {
   static readonly SIZE = 8;
@@ -7,8 +7,16 @@ class Board {
   private _board: Array<Array<Piece>>;
   
   constructor() {
-    this._board = Array.from({ length: Board.SIZE }, () =>
-      Array.from({ length: Board.SIZE }, () => new NullPiece()));
+    this._board = Array.from({ length: Board.SIZE }, (_e, i) =>
+      Array.from({ length: Board.SIZE }, (_f, j) => {
+        if (_.inRange(i, 3, Board.SIZE - 3) || i % 2 !== j % 2) {
+          return new NullPiece();
+        } else if (i < 3) {
+          return new BlackPiece();
+        } else {
+          return new RedPiece();
+        }
+      }));
   }
 
   pieceAt(row: number, col: number): Piece {
