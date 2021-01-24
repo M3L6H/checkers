@@ -1,22 +1,25 @@
 import Color from "./Color";
 import Piece from "./Piece";
 
-class RedPiece implements Piece {
+/**
+ * Represents a red piece on the {@link Board}.
+ * 
+ * @category Pieces
+ * @extends Piece
+ */
+class RedPiece extends Piece {
+
+  /**
+   * The color of a red piece is always {@link Color}.Red.
+   * 
+   * @readonly
+   * @property {Color} color  - Always {@link Color}.Red
+   */
   readonly color: Color;
 
-  private _isKing: boolean;
-  
   constructor() {
+    super();
     this.color = Color.Red;
-    this._isKing = false;
-  }
-
-  get isKing(): boolean {
-    return this._isKing;
-  }
-
-  promote(): void {
-    this._isKing = true;
   }
 }
 

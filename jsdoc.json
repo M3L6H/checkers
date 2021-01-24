@@ -1,6 +1,6 @@
 {
   "tags": {
-    "allowUnknownTags": ["optional"]
+    "allowUnknownTags": ["category", "subcategory", "mermaid", "optional"]
   },
   "source": {
     "include": ["./src"],
