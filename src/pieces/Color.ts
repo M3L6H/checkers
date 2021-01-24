@@ -1,10 +1,13 @@
 /**
  * Enum for the possible piece colors.
  * Has no reflection on the actual appearance of the pieces.
+ * 
  * @category Pieces
- * @property {number} Null  - Used by the {@link NullPiece}
- * @property {number} Black - Color for the black pieces
- * @property {number} Red   - Color for the red pieces
+ * @type {enum}
+ * 
+ * @property {number} Color.Null  - Used by the {@link NullPiece}
+ * @property {number} Color.Black - Color for the black pieces
+ * @property {number} Color.Red   - Color for the red pieces
  */
 enum Color {
   Null,
