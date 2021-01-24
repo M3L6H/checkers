@@ -1,0 +1,11 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "check-coverage": true,
+  "lines": 100,
+  "per-file": true,
+  "reporter": [
+    "text",
+    "html",
+    "json"
+  ]
+}
