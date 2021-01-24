@@ -17,9 +17,6 @@ class NullPiece implements Piece {
    */
   readonly color: Color;
 
-  /**
-   * Creates a new NullPiece.
-   */
   constructor() {
     this.color = Color.Null;
   }
