@@ -17,6 +17,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    name: Test
 
     steps:
       - name: Checkout Repo
@@ -50,9 +51,41 @@ jobs:
           fail_ci_if_error: true
           verbose: true
           flags: unittests
+  
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy App
+    needs: test
+    if: github.ref == 'refs/heads/master'
+    
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12.x"
           
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+        
+      - name: Build app
+        run: npm run build
+        
+      - name: Deploy app
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
+          CLEAN: true
+  
   docs:
     runs-on: ubuntu-latest
+    name: Publish Docs
 
     steps:
       - name: Checkout Repo
