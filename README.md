@@ -2,7 +2,6 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses"><img src="https://img.shields.io/badge/License-GPL%20v3-yellow.svg" alt="GPL v3" /></a>
-  <a href="https://github.com/M3L6H/checkers/commits"><img src="https://img.shields.io/github/commit-activity/m/M3L6H/checkers?foo=bar" alt="Commits" /></a>
   <a href="https://github.com/M3L6H/checkers/issues"><img src="https://img.shields.io/github/issues-raw/M3L6H/checkers.svg?maxAge=25000" alt="Issues" /></a>
   <a href="https://github.com/M3L6H/checkers/pulls"><img src="https://img.shields.io/github/issues-pr/M3L6H/checkers.svg?style=flat" alt="GitHub pull requests" /></a>
   <a href="https://m3l6h.github.io/checkers-docs"><img src="https://img.shields.io/github/deployments/M3L6H/checkers-docs/github-pages?label=docs" alt="Docs" /></a>
