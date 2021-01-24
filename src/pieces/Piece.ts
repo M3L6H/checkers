@@ -5,6 +5,21 @@ import Color from "./Color";
  * 
  * @abstract
  * @category Pieces
+ * 
+ * @mermaid
+ * classDiagram
+ *  Piece <|-- NullPiece : extends
+ *  Piece <|-- BlackPiece : extends
+ *  Piece <|-- RedPiece : extends
+ *  Piece: +Color color*
+ *  Piece: +boolean isKing
+ *  Piece: !boolean _isKing
+ *  Piece: +promote()
+ *  NullPiece: +Color color
+ *  NullPiece: +boolean isKing
+ *  NullPiece: +promote()
+ *  BlackPiece: +Color color
+ *  RedPiece: +Color color
  */
 abstract class Piece {
 
