@@ -1,22 +1,12 @@
 import Color from "./Color";
 import Piece from "./Piece";
 
-class RedPiece implements Piece {
+class RedPiece extends Piece {
   readonly color: Color;
 
-  private _isKing: boolean;
-  
   constructor() {
+    super();
     this.color = Color.Red;
-    this._isKing = false;
-  }
-
-  get isKing(): boolean {
-    return this._isKing;
-  }
-
-  promote(): void {
-    this._isKing = true;
   }
 }
 

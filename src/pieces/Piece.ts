@@ -1,31 +1,43 @@
 import Color from "./Color";
 
 /**
- * Defines the interface of a checkers piece.
+ * Defines the base class of a checkers piece.
  * 
+ * @abstract
  * @category Pieces
  */
-interface Piece {
+abstract class Piece {
 
   /**
-   * The {@link Color} of a piece.
+   * @abstract
    * @readonly
+   * @property {Color} color  - The {@link Color} of the piece
    */
-  readonly color: Color;
+  abstract readonly color: Color;
+  
+  protected _isKing: boolean;
+
+  constructor() {
+    this._isKing = false;
+  }
 
   /**
-   * Whether or not the piece is a king.
    * @readonly
+   * @type {boolean}
+   * @property {boolean} isKing - Whether this piece is a king
    */
-  readonly isKing: boolean;
+  get isKing(): boolean {
+    return this._isKing;
+  }
 
   /**
    * Promotes the piece into a King, if applicable.
    * 
-   * @method promote
    * @see NullPiece
    */
-  promote(): void;
+  public promote(): void {
+    this._isKing = true;
+  }
 }
 
 export default Piece;

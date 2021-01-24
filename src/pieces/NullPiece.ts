@@ -5,19 +5,18 @@ import Piece from "./Piece";
  * Represents an empty square on the {@link Board}.
  * 
  * @category Pieces
- * @implements {@link Piece}
+ * @extends Piece
  */
-class NullPiece implements Piece {
+class NullPiece extends Piece {
 
   /**
-   * The color of the NullPiece is always {@link Color}.Null.
-   * 
    * @readonly
-   * @property {Color} color  - Always {@link Color}.Null
+   * @property {Color} color -  The color of the NullPiece is always {@link Color}.Null.
    */
   readonly color: Color;
 
   constructor() {
+    super();
     this.color = Color.Null;
   }
 
@@ -26,6 +25,7 @@ class NullPiece implements Piece {
    * cannot be a "king."
    * 
    * @readonly
+   * @type {boolean}
    * @property {boolean} isKing - Always false
    */
   get isKing(): boolean { return false; } // eslint-disable-line
