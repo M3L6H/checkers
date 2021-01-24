@@ -9,8 +9,7 @@
     "lint": "tsc --noEmit && eslint '**/*.ts'",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "mocha-test": "mocha -r ts-node/register **/test/**/*.spec.ts",
-    "test": "nyc --reporter=html --reporter=text --check-coverage --lines 100 --per-file npm run mocha-test"
+    "test": "nyc mocha"
   },
   "keywords": [],
   "author": "Michael Hollingworth",
@@ -20,6 +19,7 @@
     "test"
   ],
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.14",
     "@types/jsdom": "^16.2.6",
     "@types/lodash": "^4.14.168",
@@ -41,6 +41,7 @@
     "pre-commit": "^1.2.2",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
+    "spec-xunit-file": "^0.0.1-3",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.14",
     "ts-node": "^9.1.1",
