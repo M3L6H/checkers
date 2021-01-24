@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "The goal of this project is to implement a Checkers AI with the minimax algorithm and alpha-beta pruning.",
   "private": true,
+  "main": "dist/server/index.js",
   "scripts": {
-    "build": "webpack",
+    "clean": "rm -rf dist/*",
+    "build:frontend": "webpack",
+    "build:server": "tsc --build tsconfig.server.json",
+    "build": "npm run build:frontend && npm run build:server",
+    "rebuild": "npm run clean && npm run build",
     "docs": "jsdoc -c jsdoc.json",
     "lint": "tsc --noEmit && eslint '**/*.ts'",
     "watch": "webpack --watch",
-    "start": "webpack serve --open",
-    "test": "nyc mocha"
+    "dev": "webpack serve --open",
+    "test": "nyc mocha",
+    "start:server": "node .",
+    "start": "npm run rebuild && npm run start:server"
   },
   "keywords": [],
   "author": "Michael Hollingworth",
