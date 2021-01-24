@@ -1,5 +1,16 @@
 # Checkers
 
+<p align="center">
+  <a href="https://opensource.org/licenses"><img src="https://img.shields.io/badge/License-GPL%20v3-yellow.svg" alt="GPL v3" /></a>
+  <a href="https://github.com/M3L6H/checkers/commits"><img src="https://img.shields.io/github/commit-activity/y/M3L6H/checkers" alt="Commits" /></a>
+  <a href="https://github.com/M3L6H/checkers/issues"><img src="https://img.shields.io/github/issues-raw/M3L6H/checkers.svg?maxAge=25000" alt="Issues" /></a>
+  <a href="https://github.com/M3L6H/checkers/pulls"><img src="https://img.shields.io/github/issues-pr/M3L6H/checkers.svg?style=flat" alt="GitHub pull requests" /></a>
+  <a href="https://m3l6h.github.io/checkers-docs"><img src="https://img.shields.io/github/deployments/M3L6H/checkers-docs/github-pages?label=docs" alt="Docs" /></a>
+  <a href="https://github.com/M3L6H/checkers/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/M3L6H/checkers/CI" alt="Build status"/></a>
+  <a href="https://codecov.io/gh/M3L6H/checkers"><img src="https://codecov.io/gh/M3L6H/checkers/branch/master/graph/badge.svg" alt="Code coverage" /></a>
+  <a href="https://m3l6h.github.io/checkers"><img src="https://img.shields.io/github/deployments/M3L6H/checkers/github-pages?label=deployment" alt="Deployment" /></a>
+</p>
+
 The goal of this project is to implement a Checkers AI with the minimax
 algorithm and alpha-beta pruning.
 
