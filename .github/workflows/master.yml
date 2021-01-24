@@ -34,10 +34,12 @@ jobs:
         run: npm run test
         
       - name: Upload code coverage
-        uses: actions/upload-artifact@v2
+        uses: actions/codecov-action@v1
         with:
-          name: Coverage
-          path: coverage
+          files: "**/coverage*.json"
+          fail_ci_if_error: true
+          verbose: true
+          flags: unittests
           
   docs:
     runs-on: ubuntu-latest
