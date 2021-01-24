@@ -33,6 +33,16 @@ jobs:
       - name: Unit tests
         run: npm run test
         
+      - name: Publish unit tests
+        uses: EnricoMi/publish-unit-test-result-action@v1.7
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: xunit.xml
+          check_name: Unit Test Results
+          report_individual_runs: true
+          comment_on_pr: true
+        
       - name: Upload code coverage
         uses: codecov/codecov-action@v1
         with:
