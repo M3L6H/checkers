@@ -6,7 +6,6 @@ import path from "path";
 dotenv.config();
 
 const app = express();
-const port = 8080;
 
 if (process.env.NODE_ENV === "development") {
   // Set up livereload middleware
@@ -35,7 +34,7 @@ app.get("/", (_req, res) => {
 
 process.on("SIGINT", () => process.exit());
 
-app.listen(port, () => {
+app.listen(process.env.SERVER_PORT, () => {
   // eslint-disable-next-line
-  console.log(`server started at http://localhost:${ port }`);
+  console.log(`server started at http://localhost:${ process.env.SERVER_PORT }`);
 });
