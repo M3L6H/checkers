@@ -24,8 +24,5 @@
     "comma-dangle": ["error", "never"],
     "quotes": ["error", "double"],
     "space-before-function-paren": ["error", "never"]
-  },
-  "ignorePatterns": [
-    "webpack.config.js"
-  ]
+  }
 }
