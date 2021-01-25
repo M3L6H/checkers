@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 import express from "express";
-import path from "path";
 import { setupLivereload } from "./middleware";
 import * as routes from "./routes";
 
@@ -11,10 +10,6 @@ const app = express();
 
 // Use livereload if in development
 if (process.env.NODE_ENV === "development") setupLivereload(app);
-
-// Configure Express to use EJS
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
 
 // Configure routes
 routes.home(app);
