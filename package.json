@@ -16,7 +16,9 @@
     "dev": "webpack serve --open",
     "test": "nyc mocha",
     "start:server": "node .",
-    "start": "npm run rebuild && npm run start:server"
+    "start": "npm run rebuild && npm run start:server",
+    "docker:build": "docker build . -t checkers",
+    "docker:run": "docker run --rm -p 80:8080 checkers"
   },
   "keywords": [],
   "author": "Michael Hollingworth",
