@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The goal of this project is to implement a Checkers AI with the minimax algorithm and alpha-beta pruning.",
   "private": true,
-  "main": "dist/server/index.js",
+  "main": "dist/server/server.js",
   "scripts": {
     "clean": "rm -rf dist/*",
     "build:frontend": "webpack",

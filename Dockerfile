@@ -22,4 +22,4 @@ COPY --from=build /app/dist .
 
 USER node
 
-CMD ["node", "/app/server/index.js"]
+CMD ["node", "/app/server/server.js"]
