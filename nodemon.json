@@ -4,6 +4,6 @@
   "events": {
     "restart": "echo App restarted due to $FILENAME"
   },
-  "watch": ["server.ts", "src/", "style/", "views/"],
-  "ext": "ts,scss,ejs"
+  "watch": ["dist"],
+  "ext": "js,scss,ejs"
 }
