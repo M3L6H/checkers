@@ -1,6 +1,6 @@
 import * as express from "express";
 
-const setupLivereload = (app: express.Application) => {
+const setupLivereload = (app: express.Application): void => {
   // Set up livereload middleware
   // eslint-disable-next-line
   const livereload = require("livereload");

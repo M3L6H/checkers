@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import path from "path";
-import setupLivereload from "./middleware/livereload";
+import { setupLivereload } from "./middleware";
 
 // Initialize configuration
 dotenv.config();
