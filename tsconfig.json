@@ -23,6 +23,7 @@
   "exclude": [
     "./test",
     "./tools",
+    "./middleware",
     "./server.ts"
   ]
 }
