@@ -11,5 +11,6 @@ tutorials/
 .nycrc.json
 jsdoc.json
 LICENSE.md
+nodemon.json
 README.md
 xunit.xml
