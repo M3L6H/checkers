@@ -8,4 +8,6 @@ dist/
 docs/
 node_modules/
 
+.env
+
 xunit.xml

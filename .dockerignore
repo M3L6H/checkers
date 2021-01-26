@@ -1,0 +1,17 @@
+.github/
+.nyc_output/
+coverage/
+dist/
+node_modules/
+test/
+tutorials/
+.env
+.eslintrc.json
+.gitignore
+.mocharc.json
+.nycrc.json
+jsdoc.json
+LICENSE.md
+nodemon.json
+README.md
+xunit.xml

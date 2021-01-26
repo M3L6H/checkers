@@ -1,0 +1,9 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "events": {
+    "restart": "echo App restarted due to $FILENAME"
+  },
+  "watch": ["dist"],
+  "ext": "js,scss,ejs"
+}
